@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1032</width>
+    <height>638</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>股票分析系统</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="FinanceShow">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1031</width>
+      <height>341</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>市场</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="market"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>360</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>盈亏</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="price_gain_loss"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>360</y>
+      <width>200</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>股票状态</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="st_status"/>
+     </item>
+     <item>
+      <widget class="QComboBox" name="new_stocks"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QCheckBox" name="price_low">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>450</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>股价处于低位</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="choose_stocks_btn">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>590</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="avg_mul_arrange">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>450</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>均线多头排列</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="macd_fall_away">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>410</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>MACD背离</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="macd_golden_cross">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>410</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>MACD金叉</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="kdj_golden_cross">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>450</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>KDJ金叉</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="rsi_oversold">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>410</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RSI超卖</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="price_inflow">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>490</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>近5日资金流入</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="volume_trun_big">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>490</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>成交量逐步放大</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="big_contract">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>490</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>近5日大单增加</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="volumue_fall_away">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>410</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>量价背离</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="boll_trun_up">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>490</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BOLL开口向上</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="macd_turn_up">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>MACD开口向上</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="kdj_turn_up">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>450</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>KDJ开口向上</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>359</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>%&lt; 换手率 &lt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>400</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> &lt;  股 价 &lt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>440</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> &lt;流通股本&lt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="kdj_oversold">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>450</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>KDJ超卖</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>480</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> &lt; 市盈率 &lt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>400</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> &lt;每股净资产&lt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>479</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> &lt; 市净率 &lt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>440</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> &lt;未分配利润&lt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>360</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt; 每股收益 &lt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="run_way">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>560</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>360</y>
+      <width>16</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>%</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="msg_process_show">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>341</y>
+      <width>221</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="turnover_rate_min">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>360</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="turnover_rate_max">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>359</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="perstocks_grain_min">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>359</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="perstocks_grain_max">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>359</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="price_min">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>400</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="price_max">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>400</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="perstocks_netasset_min">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>399</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="perstocks_netasset_max">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>400</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="flow_stocks_min">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>440</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="flow_stocks_max">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>440</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="undis_profi_min">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>440</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="undis_profi_max">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>439</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="priceearning_min">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>480</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="priceearning_max">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>480</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="market_to_boot_radio_min">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>480</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="market_to_boot_radio_max">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>480</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inc_radio_min">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>520</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="inc_radio">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>519</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> %&lt;近5日涨幅&lt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inc_radio_max">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>520</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>520</y>
+      <width>16</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>%</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="price_wave_min">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>520</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="inc_radio_2">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>520</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> % &lt; 每日涨跌 &lt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="price_wave_max">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>520</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>520</y>
+      <width>16</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>%</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>msg_process_show</zorder>
+   <zorder>FinanceShow</zorder>
+   <zorder>horizontalLayoutWidget_2</zorder>
+   <zorder>horizontalLayoutWidget_5</zorder>
+   <zorder>horizontalLayoutWidget_6</zorder>
+   <zorder>price_low</zorder>
+   <zorder>choose_stocks_btn</zorder>
+   <zorder>avg_mul_arrange</zorder>
+   <zorder>macd_fall_away</zorder>
+   <zorder>macd_golden_cross</zorder>
+   <zorder>kdj_golden_cross</zorder>
+   <zorder>rsi_oversold</zorder>
+   <zorder>price_inflow</zorder>
+   <zorder>volume_trun_big</zorder>
+   <zorder>big_contract</zorder>
+   <zorder>volumue_fall_away</zorder>
+   <zorder>boll_trun_up</zorder>
+   <zorder>macd_turn_up</zorder>
+   <zorder>kdj_turn_up</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_4</zorder>
+   <zorder>kdj_oversold</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_10</zorder>
+   <zorder>label_11</zorder>
+   <zorder>run_way</zorder>
+   <zorder>label_12</zorder>
+   <zorder>turnover_rate_min</zorder>
+   <zorder>turnover_rate_max</zorder>
+   <zorder>perstocks_grain_min</zorder>
+   <zorder>perstocks_grain_max</zorder>
+   <zorder>price_min</zorder>
+   <zorder>price_max</zorder>
+   <zorder>perstocks_netasset_min</zorder>
+   <zorder>perstocks_netasset_max</zorder>
+   <zorder>flow_stocks_min</zorder>
+   <zorder>flow_stocks_max</zorder>
+   <zorder>undis_profi_min</zorder>
+   <zorder>undis_profi_max</zorder>
+   <zorder>priceearning_min</zorder>
+   <zorder>priceearning_max</zorder>
+   <zorder>market_to_boot_radio_min</zorder>
+   <zorder>market_to_boot_radio_max</zorder>
+   <zorder>inc_radio_min</zorder>
+   <zorder>inc_radio</zorder>
+   <zorder>inc_radio_max</zorder>
+   <zorder>label_13</zorder>
+   <zorder>price_wave_min</zorder>
+   <zorder>inc_radio_2</zorder>
+   <zorder>price_wave_max</zorder>
+   <zorder>label_14</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

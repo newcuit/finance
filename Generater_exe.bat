@@ -1,0 +1,1 @@
+pyuic5.exe Finance.ui -o Finance_ui.py
